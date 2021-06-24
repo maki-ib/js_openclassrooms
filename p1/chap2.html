@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapitre 2 | Déclarez des variables et modi</title>
+    <style>
+        body {
+            background-color: #111;
+            color: #EEE;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .series-frame {
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border: 2px solid #EEE;
+            margin: 30px;
+            padding: 10px;
+        }
+
+    </style>
 </head>
 <body>
-    
+    <h1>Test 1</h1>
+    <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="info"></p>
+    </div>
+    <script>
+        // Create your variables here
+        // ==========================================
+        let numberOfSeasons = 6;
+        let numberOfEpisodes = 12;
+        // ==========================================
+
+        let paragraph = document.querySelector('#info');
+        paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season`
+    </script>
 </body>
 </html>
