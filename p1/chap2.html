@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chapitre 2 | Déclarez des variables et modi</title>
+    <title>Chapitre 2 | Déclarez des variables et modifiez leurs valeurs</title>
+    <link rel="stylesheet" href="css.css">    
     <style>
         body {
             background-color: #111;
@@ -26,7 +27,7 @@
     </style>
 </head>
 <body>
-    <h1>Test 1</h1>
+    <!--<h1>Test 1</h1>
     <div class="series-frame">
         <h2>The Story of Tau</h2>
         <p id="info"></p>
@@ -40,6 +41,29 @@
 
         let paragraph = document.querySelector('#info');
         paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season`
+    </script>-->
+    <h1>Test 2</h1>
+    <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="info"></p>
+    </div>
+    <script>
+        let numberOfSeasons = 6;
+        let numberOfEpisodes = 12;
+        let episodeTime = 45;
+        let commercialTime = 5;
+
+        // Calculate totalShowTime here
+        // =====================================
+
+        let totalShowTime = (episodeTime + commercialTime) * numberOfSeasons * numberOfEpisodes;
+
+        // =====================================
+
+        let paragraph = document.querySelector('#info');
+        paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season
+
+        Total viewing time: ${totalShowTime} minutes`
     </script>
 </body>
 </html>
