@@ -5,14 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapitre 2 | Déclarez des variables et modifiez leurs valeurs</title>
-    <link rel="stylesheet" href="css.css">    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">    
     <style>
         body {
             background-color: #111;
             color: #EEE;
             font-family: 'Roboto Slab', serif;
         }
-
         .series-frame {
             max-width: 600px;
             display: flex;
@@ -23,7 +22,9 @@
             margin: 30px;
             padding: 10px;
         }
-
+        .my-form {
+            padding: 20px;
+        }
     </style>
 </head>
 <body>
@@ -42,7 +43,7 @@
         let paragraph = document.querySelector('#info');
         paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season`
     </script>-->
-    <h1>Test 2</h1>
+    <!--<h1>Test 2</h1>
     <div class="series-frame">
         <h2>The Story of Tau</h2>
         <p id="info"></p>
@@ -64,6 +65,40 @@
         paragraph.innerText = `${numberOfSeasons} seasons, ${numberOfEpisodes} episodes per season
 
         Total viewing time: ${totalShowTime} minutes`
+    </script>-->
+    <h1>Test 3</h1>
+    <div class="my-form">
+        <label for="day-input">Number of days</label>
+        <input id="day-input" type="number" min="1">
+        <button id="calculate-button">Calculate!</button>
+        <p id="hours"></p>
+        <p id="minutes"></p>
+        <p id="seconds"></p>
+    </div>
+    <script>
+        // Create constants here
+        // =====================================
+        const hoursPerDay = 24;
+        const minutesPerHour = 60;
+        const secondsPerMinute = 60;
+        // =====================================
+
+        const dayInput = document.querySelector('#day-input');
+        const calculateButton = document.querySelector('#calculate-button');
+        const hours = document.querySelector('#hours');
+        const minutes = document.querySelector('#minutes');
+        const seconds = document.querySelector('#seconds');
+
+        calculateButton.addEventListener('click', () => {
+        let days = dayInput.value;
+        let calcHours = days * hoursPerDay;
+        let calcMinutes = calcHours * minutesPerHour;
+        let calcSeconds = calcMinutes * secondsPerMinute;
+        
+        hours.innerText = `${calcHours} hours`;
+        minutes.innerText = `${calcMinutes} minutes`;
+        seconds.innerText = `${calcSeconds} seconds`;
+        });
     </script>
 </body>
 </html>
