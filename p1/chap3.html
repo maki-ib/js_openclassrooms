@@ -5,9 +5,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chapitre 3| Enregistrez vos données avec des types de données</title>
-    
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <style>
+       body {
+            background-color: #111;
+            color: #EEE;
+            font-family: 'Roboto Slab', serif;
+        }
+
+        .series-frame {
+            max-width: 600px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            border: 2px solid #EEE;
+            margin: 30px;
+            padding: 10px;
+        } 
+    </style>
 </head>
 <body>
-    
+    <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="episode-info"></p>
+    </div>
+    <script>
+        // Create variables here
+        // =========================================
+        let episodeTitle = "The beginning";
+        let episodeDuration = 42;
+        let hasBeenWatched = true;
+
+        // =========================================
+
+        document.querySelector('#episode-info').innerText = `Episode: ${episodeTitle}
+        Duration: ${episodeDuration} min
+        ${hasBeenWatched ? 'Already watched' : 'Not yet watched'}`
+    </script>
 </body>
 </html>
