@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    <!-- Test 1 -->
+    <!-- Test 1
     <div class="series-frame">
         <h2>The Story of Tau</h2>
         <p id="episode-info"></p>
@@ -45,6 +45,29 @@
         document.querySelector('#episode-info').innerText = `Episode: ${episode.title}
         Duration: ${episode.duration} min
         ${episode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`
+    </script> -->
+    Test 2
+    <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="episode-info"></p>
+    </div>
+    <script>
+        let episode = {
+            title: 'Dark Beginnings',
+            duration: 45,
+            hasBeenWatched: false
+        };
+
+        // Create variables here
+        // =====================================
+        let episodeTitle = episode.title;
+        let episodeDuration = episode.duration;
+        let episodeHasBeenWatched = episode.hasBeenWatched;
+        // =====================================
+
+        document.querySelector('#episode-info').innerText = `Episode: ${episodeTitle}
+        Duration: ${episodeDuration} min
+        ${episodeHasBeenWatched ? 'Already watched' : 'Not yet watched'}`
     </script>
 </body>
 </html>
