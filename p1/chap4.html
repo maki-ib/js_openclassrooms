@@ -23,6 +23,9 @@
             margin: 30px;
             padding: 10px;
         }
+        .series-frame h2 {
+            margin-right: 20px;
+        }
     </style>
 </head>
 <body>
@@ -46,28 +49,73 @@
         Duration: ${episode.duration} min
         ${episode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`
     </script> -->
-    Test 2
+    <!-- Test 2
+        <div class="series-frame">
+            <h2>The Story of Tau</h2>
+            <p id="episode-info"></p>
+        </div>
+        <script>
+            let episode = {
+                title: 'Dark Beginnings',
+                duration: 45,
+                hasBeenWatched: false
+            };
+
+            // Create variables here
+            // =====================================
+            let episodeTitle = episode.title;
+            let episodeDuration = episode.duration;
+            let episodeHasBeenWatched = episode.hasBeenWatched;
+            // =====================================
+
+            document.querySelector('#episode-info').innerText = `Episode: ${episodeTitle}
+            Duration: ${episodeDuration} min
+            ${episodeHasBeenWatched ? 'Already watched' : 'Not yet watched'}`
+        </script> 
+    -->
+    Test 3
+    <div class="series-frame">  
+        <h2>The Story of Tau</h2>
+        <p id="first-episode-info"></p>
+    </div>
+      
     <div class="series-frame">
         <h2>The Story of Tau</h2>
-        <p id="episode-info"></p>
+        <p id="second-episode-info"></p>
     </div>
+      
+    <div class="series-frame">
+        <h2>The Story of Tau</h2>
+        <p id="third-episode-info"></p>
+    </div>
+
     <script>
-        let episode = {
-            title: 'Dark Beginnings',
-            duration: 45,
-            hasBeenWatched: false
-        };
-
-        // Create variables here
-        // =====================================
-        let episodeTitle = episode.title;
-        let episodeDuration = episode.duration;
-        let episodeHasBeenWatched = episode.hasBeenWatched;
+        // Create a class here
         // =====================================
 
-        document.querySelector('#episode-info').innerText = `Episode: ${episodeTitle}
-        Duration: ${episodeDuration} min
-        ${episodeHasBeenWatched ? 'Already watched' : 'Not yet watched'}`
+        class Episode{
+            constructor(title,duration,hasBeenWatched){
+                this.title = title;
+                this.duration = duration;
+                this.hasBeenWatched = hasBeenWatched;
+            }
+        }
+        let firstEpisode = new Episode("The begin", 45, true);
+        let secondEpisode = new Episode("The Mystery Continues", 42, false);
+        let thirdEpisode = new Episode("The Unexpected Climax", 44, false);
+        // =====================================
+
+        document.querySelector('#first-episode-info').innerText = `Episode: ${firstEpisode.title}
+        Duration: ${firstEpisode.duration} min
+        ${firstEpisode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
+
+        document.querySelector('#second-episode-info').innerText = `Episode: ${secondEpisode.title}
+        Duration: ${secondEpisode.duration} min
+        ${secondEpisode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
+
+        document.querySelector('#third-episode-info').innerText = `Episode: ${thirdEpisode.title}
+        Duration: ${thirdEpisode.duration} min
+        ${thirdEpisode.hasBeenWatched ? 'Already watched' : 'Not yet watched'}`;
     </script>
 </body>
 </html>
